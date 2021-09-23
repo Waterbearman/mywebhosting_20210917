@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML와 XHTML5 라는 이름의 표기법 차이일 뿐 둘은 똑같다. -->
+    <video src="Ink - 67358.mp4" controls></video>
+    <video src="Ink - 67358.mp4" controls="controls"></video>
+    
+    <h1>자동재생 하고 싶다면?</h1>
+    <p>소리를 음소거 해야지만 자동재생 가능</p>
+    <video src="Ink - 67358.mp4" controls autoplay muted></video>
+
+    <h1>동영상 썸네일 삽입하고, source 태그 넣어서 여러가지 확장자를 모두 올리고 싶음</h1>
+    <!-- 해당 동영상의 썸네일을 미리 넣고, 해당 동영상이 재생이 안될 경우 대비 방법 -->
+    <!-- width="1280px" height="720px" 크기 조절 -->
+    <!-- poster="KakaoTalk_20210114_202352445.png" 미리 보기 화면 -->
+    <video width="1280px" height="720px" controls poster="KakaoTalk_20210114_202352445.png">
+        <!-- Ink동영상 mp4 확장자가 재생 안되면 webm 확장자 동영상이 재생되게 하기 -->
+        <!-- 사실은 Ink - 67358.webm 파일도 실제로 집어 넣어야먄 됨 -->
+        <source src="Ink - 67358.mp4" type="video/mp4"> 
+        <source src="Ink - 67358.webm" type="video/webm">
+    </video>
+</body>
+</html>
